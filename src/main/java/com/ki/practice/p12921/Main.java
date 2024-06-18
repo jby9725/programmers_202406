@@ -1,7 +1,6 @@
 package com.ki.practice.p12921;
 
-//import static java.lang.Math.*;
-// 출처: https://developer-talk.tistory.com/764 [DevStory:티스토리]
+import static java.lang.Math.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,13 +21,13 @@ class Solution {
         int answer = 0;
         int count = 0;
 
-//        int num = 25;
-//        double result = sqrt(num);
-//
-//        System.out.println("25의 제곱근: " + result);
-//        출처: https://developer-talk.tistory.com/764 [DevStory:티스토리]
+        int num = n;
+        double result = sqrt(num);
+        int rs = ((int) (result / 1.0)) + 1;
 
-        for (int i = 1; i <= n; i++) {
+        System.out.println(n + "의 제곱근 + 1 : " + rs);
+
+        for (int i = 1; i <= rs; i++) {
             count = 0;
 
             if (n == 1) {
