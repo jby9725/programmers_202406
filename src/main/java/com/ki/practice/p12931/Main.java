@@ -16,23 +16,19 @@ class Solution {
 
         int temp = 0;
         int temp2 = 0;
-        int num = n;
+        int count = 0;
 
-
-        do {
-            temp = num % 10;
-            temp2 = num / 10;
-
-            System.out.println(temp); // 3
-            System.out.println(temp2); // 12
-            System.out.println("===========");
-
+        for (int i = 1; i <= 10; i++) {
+            temp2 = n / 10;
+            temp = n % 10;
+            n = temp2;
+//            System.out.println(temp);
+//            System.out.println(temp2);
             answer += temp;
-
-            num = temp2;
-            temp2 = temp;
-
-        } while (temp2 != 0);
+//            System.out.println("=============");
+            if(temp2 == 0)
+                break;
+        }
 
         return answer;
     }
